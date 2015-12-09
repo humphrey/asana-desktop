@@ -1,14 +1,15 @@
 {
-  "name": "electron-quick-start",
+  "name": "Asana Desktop",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "A minimal desktop wrapper around the Asana web-app.",
   "main": "main.js",
   "scripts": {
-    "start": "electron main.js"
+    "start": "electron main.js",
+    "pack:osx": "npm run build:osx && electron-builder \"dist/osx/Asana.app\" --platform=osx --out=\"dist/osx\" --config=packager.json"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/atom/electron-quick-start.git"
+    "url": "git+https://github.com/humphrey/asana-desktop.git"
   },
   "keywords": [
     "Electron",
@@ -16,13 +17,16 @@
     "start",
     "tutorial"
   ],
-  "author": "GitHub",
+  "author": "Humphrey Murray",
   "license": "CC0-1.0",
   "bugs": {
-    "url": "https://github.com/atom/electron-quick-start/issues"
+    "url": "https://github.com/humphrey/asana-desktop/issues"
   },
-  "homepage": "https://github.com/atom/electron-quick-start#readme",
+  "homepage": "https://github.com/humphrey/asana-desktop#readme",
   "devDependencies": {
     "electron-prebuilt": "^0.35.0"
+  },
+  "dependencies": {
+    "electron-builder": "^2.3.1"
   }
 }
